@@ -1,0 +1,14 @@
+<div class="list row">
+    <div class="col-md-6">
+      <h4>Libros List</h4>
+      <ul class="list-group">
+        <li
+          class="list-group-item"
+          *ngFor="let libro of libros; let i = index"
+          (click)="verDetalle(libro._id);"
+        >
+          {{ libro.nombre }}
+        </li>
+      </ul>
+    </div>
+</div>
