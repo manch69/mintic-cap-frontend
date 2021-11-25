@@ -23,12 +23,12 @@ El problema fue indetectable durante el webinar pero una revison exhaustiva hizo
 ----------------------------------
 ## Pasos para Configurar el Proyecto Frontend Angular
 ----------------------------------
-1. Instalar Angular
+1. ### Instalar Angular
     ```
     npm install -g @angular/cli
     ```
 
-2. Crear un nuevo proyecto 
+2. ### Crear un nuevo proyecto 
     ```
     ng new NOMBRE_DEL_PROYECTO
     ```
@@ -51,11 +51,11 @@ ng g c components/NOMBRE_DEL_COMPONENTE
 ```
 ng g s services/NOMBRE_DEL_SERVICIO
 ```
-5. Como crear Modelos:
+5. ### Como crear Modelos:
 ```
 ng g class models/NOMBRE_DEL_MODELO --type=model
 ```
-6. Como instalar Bootstrap:
+6. ### Como instalar Bootstrap:
     a. Ejecutar:
     ```
     npm install bootstrap jquery --save
@@ -75,7 +75,7 @@ ng g class models/NOMBRE_DEL_MODELO --type=model
 ----------------------------------
 ## Plantillas Proyecto Frontend Angular
 ----------------------------------
-1. Agregar FormsModule y HttpClientModule:
+1. ### Agregar FormsModule y HttpClientModule:
     ```js
     import { FormsModule } from '@angular/forms';
     import { HttpClientModule } from '@angular/common/http';
@@ -92,7 +92,7 @@ ng g class models/NOMBRE_DEL_MODELO --type=model
     })
     export class AppModule { }
     ```
-2. Crear Rutas para componentes. [Crear Componente](#como-crear-componentes)
+2. ### Crear Rutas para componentes. [Crear Componente](#como-crear-componentes)
 
 ```js
 import { NgModule } from '@angular/core';
@@ -114,7 +114,7 @@ const routes: Routes = [
 })
 export class AppRoutingModule { }
 ```
-3. Componente DataService [Crear Service](#como-crear-servicios),  [libro.service.ts](src/app/services/libro.service.ts) :
+3. ### Componente DataService [Crear Service](#como-crear-servicios),  [libro.service.ts](src/app/services/libro.service.ts) :
 ```js
 import { Injectable } from '@angular/core';
 
@@ -147,7 +147,7 @@ export class LibroService {
 }
 ```
 
-4. Componente Listar Documentos:
+4. ### Componente Listar Documentos:
     1. ENTIDAD-list.components.ts
         ```js
         import { Component, OnInit } from '@angular/core';
@@ -213,7 +213,7 @@ export class LibroService {
         </div>
         ```
 
-5. Componente Crear Documento:
+5. ### Componente Crear Documento:
     1. add-ENTIDAD.components.ts
     ```js
     import { Component, OnInit } from '@angular/core';
@@ -308,7 +308,7 @@ export class LibroService {
     ```
     
 
-6. Componente Detalle Documento:
+6. ### Componente Detalle Documento:
     1. ENTIDAD-details.components.ts
         ```js
             import { Component, OnInit } from '@angular/core';
