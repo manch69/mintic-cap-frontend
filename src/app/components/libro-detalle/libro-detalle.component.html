@@ -1,0 +1,50 @@
+<div>
+    <div *ngIf="libroActivo._id" class="edit-form">
+        <h4>Libro</h4>
+        <form class="d-flex flex-column justify-content-center col-5">
+            <div class="p-2 bd-highlight">
+        
+            <label for="nombre">nombre</label>
+            <input
+                type="text"
+                class="form-control"
+                id="nombre"
+                [(ngModel)]="libroActivo.nombre"
+                name="nombre"
+            />
+            </div>
+            <div class="p-2 bd-highlight">
+            <label for="descripcion">Descripcion</label>
+            <input
+                type="text"
+                class="form-control"
+                id="description"
+                [(ngModel)]="libroActivo.descripcion"
+                name="descripcion"
+            />
+            </div>
+    
+        </form>
+        <div class="d-flex flex-row bd-highlight mb-3">
+            <div class="p-2 bd-highlight"><button class="badge bg-danger mr-2" (click)="deleteLibro()">
+                Borrar
+            </button></div>
+            <div class="p-2 bd-highlight"><button
+                type="submit"
+                class="badge bg-success mb-2"
+                (click)="updateLibro()"
+            >
+                Actualizar
+            </button></div>
+        </div>
+        
+    
+        
+        <p>{{ message }}</p>
+        </div>
+    
+        <div *ngIf="!libroActivo._id">
+        <br />
+        <p>No hay acceso a este libro...</p>
+    </div>
+</div>
