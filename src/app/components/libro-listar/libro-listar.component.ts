@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Libro } from 'src/app/models/libro.model';
 import { LibroService } from 'src/app/services/libro-service.service';
 
@@ -13,7 +14,8 @@ export class LibroListarComponent implements OnInit {
     libros?: Libro[];
     nombre = '';
     
-    constructor(private libroService: LibroService) { }
+    constructor(private libroService: LibroService,
+        private enrutador: Router) { }
     
     ngOnInit(): void {
         this.retrieveLibros();
@@ -36,7 +38,9 @@ export class LibroListarComponent implements OnInit {
     }
 
     verDetalle(id: any){
-        window.location.href='/libro/'+id;
+        this.enrutador.navigate(["/libro",id])
+        //window.location.href= '/libro/'+id;
+
         //this.router.navigate(['/tutorials']);
         //import { ActivatedRoute, Router } from '@angular/router';
     }

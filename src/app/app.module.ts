@@ -9,13 +9,15 @@ import { AddLibroComponent } from './components/add-libro/add-libro.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { LibroDetalleComponent } from './components/libro-detalle/libro-detalle.component';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LibroListarComponent,
     AddLibroComponent,
-    LibroDetalleComponent
+    LibroDetalleComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

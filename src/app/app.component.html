@@ -4,13 +4,16 @@
     <div class="navbar-nav mr-auto">
 
         <li class="nav-item">
-          <a routerLink="libro" class="nav-link">Libros</a>
+          <a routerLink="libro" class="nav-link" *ngIf="loginState">Libros</a>
         </li>
         <li class="nav-item">
-          <a routerLink="addLibro" class="nav-link">Add</a>
+          <a routerLink="addLibro" class="nav-link" *ngIf="loginState">Add</a>
         </li>
         <li class="nav-item">
-          <a routerLink="addLibro" class="nav-link">Otra Op</a>
+          <a routerLink="login" class="nav-link" *ngIf="!loginState">Login</a>
+        </li>
+        <li class="nav-item">
+          <a (click)="LogOut()" class="nav-link" *ngIf="loginState">LogOut</a>
         </li>
 
     </div>

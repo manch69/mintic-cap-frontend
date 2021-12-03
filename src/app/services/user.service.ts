@@ -4,22 +4,26 @@ import { Observable } from 'rxjs';
 
 import { Libro } from '../models/libro.model';
 
-const baseUrl = 'https://cap-2-12-6-lc.herokuapp.com/api/libro'
+const baseUrl = 'https://cap-2-12-6-lc.herokuapp.com/api/user'
 
 @Injectable({
   providedIn: 'root'
 })
-export class LibroService {
+export class UserService {
 
   constructor(private http: HttpClient) { }
+  
+  login(data: any): Observable<any>{
+    return this.http.post(baseUrl+"/login", data)
+  }
 
-  getAll(): Observable<Libro[]>{
-    return this.http.get<Libro[]>(baseUrl)
+  getAll(): Observable<any>{
+    return this.http.get(baseUrl)
   } 
-  get(id: any): Observable<Libro>{
+  get(id: any): Observable<any>{
     return this.http.get(`${baseUrl}/${id}`) // ` Alt+96
   }
-  create(data: any): Observable<Libro>{
+  create(data: any): Observable<any>{
     return this.http.post(baseUrl, data)
   }
 
